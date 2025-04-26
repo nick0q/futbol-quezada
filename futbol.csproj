@@ -15,7 +15,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.13" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.13" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.13" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.13" />
+    <!--<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.13" />/-->
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2" /> <!--agregamos libreria postgres-->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.3" /> <!--agregamos libreria sqlserver-->
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.13" />
   </ItemGroup>
 
