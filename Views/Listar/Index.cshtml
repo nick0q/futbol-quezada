@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Listado de Jugadores con Equipos";
+    var jugadores = ViewBag.JugadoresConEquipos;
+}
+
+<h2>Listado de jugadores con sus equipos</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Jugador</th>
+            <th>Equipos asociados</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in jugadores)
+        {
+            <tr>
+                <td>@item.NombreJugador</td>
+                <td>
+                    @if (item.Equipos.Count == 0)
+                    {
+                        <span class="text-muted">Sin equipo</span>
+                    }
+                    else
+                    {
+                        @string.Join(", ", item.Equipos)
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
