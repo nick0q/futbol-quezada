@@ -1,0 +1,45 @@
+@model futbol.Models.Player
+
+@{
+    ViewData["Title"] = "Formulario del jugador";
+}
+
+<h2>Formulario del jugador</h2>
+
+<form method="post" asp-action="RegistrarJugador">
+    <div class="form-group">
+        <label asp-for="Nombre">Nombre</label>
+        <input asp-for="Nombre" class="form-control"/>
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Edad">Edad</label>
+        <input asp-for="Edad" class="form-control" />
+        <span asp-validation-for="Edad" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Posicion">Posicion</label>
+        <input asp-for="Posicion" class="form-control" />
+        <span asp-validation-for="Posicion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EquipoActual">Equipo Actual</label>
+        <input asp-for="EquipoActual" class="form-control"></input>
+        <span asp-validation-for="EquipoActual" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Registrar</button>
+</form>
+
+ <h1>@ViewData["Message"]</h1>
+
+ @section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+
+}
